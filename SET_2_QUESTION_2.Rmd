@@ -1,0 +1,95 @@
+---
+title: "Untitled"
+author: "22MIA1155s2"
+date: "2023-11-24"
+output: html_document
+---
+
+
+```{r}
+Sys.time()
+Sys.info()
+```
+```{r}
+install.packages()
+```
+```{r}
+library(dplyr)
+```
+
+```{r}
+?iris
+```
+
+```{r}
+head<-head(iris,8)
+print(head)
+```
+```{r}
+colnames(iris)
+```
+```{r}
+range(iris$Sepal.Length)
+```
+
+#observations
+```{r}
+subset$.data.frame(iris,iris$Petal.Length>5)
+```
+
+#Sepal_Area
+```{r}
+area=(iris$Sepal.Length*iris$Sepal.Width)
+print(area)
+```
+
+
+```{r}
+range(iris$Sepal.Length[iris$Species == "setosa"])
+range(iris$Sepal.Length[iris$Species == "versicolor"])
+range(iris$Sepal.Length[iris$Species == "virginica"])
+```
+
+```{r}
+subset_iris <- subset(iris, Petal.Length > 5)
+```
+```{r}
+iris$Sepal_Area <- iris$Sepal.Length * iris$Sepal.Width
+```
+
+```{r}
+setosa_mean <- mean(iris$Sepal.Length[iris$Species == "setosa"])
+versicolor_mean <- mean(iris$Sepal.Length[iris$Species == "versicolor"])
+```
+
+
+```{r}
+barplot(c(setosa_mean, versicolor_mean), names.arg = c("setosa", "versicolor"), 
+        xlab = "Species", ylab = "Mean Value", main = "Comparison of Sepal Length")
+```
+
+
+```{r}
+setosa_mean <- mean(iris$Sepal.Length[iris$Species == "setosa"])
+versicolor_mean <- mean(iris$Sepal.Length[iris$Species == "versicolor"])
+```
+
+
+```{r}
+barplot(c(setosa_mean, versicolor_mean), names.arg = c("setosa", "versicolor"), 
+        xlab = "Species", ylab = "Mean Value", main = "Comparison of Sepal Length")
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
